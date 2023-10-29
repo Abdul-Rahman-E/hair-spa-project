@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="pria">
+    <meta name="description" content="boutique hair salon that specializes in cut, color and styling">
+    <meta name="language" content="english">
+    <link rel="author" href="human.txt">
+    <link rel="stylesheet" href="newStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html" style="display: flex; flex-direction: column;">
+                <img class="logo" src="/images/Artboard 19.png" alt="logo" style="width: 6em;">
+                <img class="tagline" src="/images/Artboard 22.png" alt="tagline" style="width: 6em;">
+            </a>
+        </div>
+    </header>
+    <nav>
+        <ul class="inside">
+            <li><a href="index.html">home</a></li>
+            <li><a href="tutorials.html">tutorials</a></li>
+            <li><a href="book.html">book</a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+    </nav>
+    <main class="book-main">
+        <div class="left">
+            <form action="/sucess.html" method="get">
+                <h2>Book Appointment</h2>
+                <div class="form-field field1">
+                    <label for="your-name">Your Name</label>
+                    <input type="text" name="your-name" id="your-name" placeholder="your name" required>
+                </div>
+                <div class="form-field field2">
+                    <label for="your-email">Your Email</label>
+                    <input type="email" name="your-email" id="your-email" placeholder="your email" required>
+                </div>
+                <div class="form-field field3">
+                    <label for="datenum">Date</label>
+                    <input type="date" name="datenum" required>
+                </div>
+                <div class="form-field field4">
+                    <label for="time">Time</label>
+                    <input name="time" id="time" list="timing" placeholder="choose time" required>
+                    <datalist id="timing">
+                        <option value="10:00 PM"></option>
+                        <option value="11:00 PM"></option>
+                        <option value="12:00 PM"></option>
+                        <option value="1:00 PM"></option>
+                        <option value="2:00 PM"></option>
+                        <option value="3:00 PM"></option>
+                        <option value="4:00 PM"></option>
+                        <option value="5:00 PM"></option>
+                        <option value="6:00 PM"></option>
+                        <option value="7:00 PM"></option>
+                    </datalist>
+                </div>
+                <div class="form-field field5">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" name="phone" id="phone" placeholder="write your number here.." pattern="^\+?[0-9]{4}[0-9]{3}[0-9]{3}" title="Please enter valid phone number" required>
+                </div>
+                <div class="form-field field6">
+                    <label for="service">Service</label>
+                    <select name="service" id="service" required>
+                        <option value="select">Select-any-service</option>
+                        <option value="Expert-Haircut">Expert-Haircut</option>
+                        <option value="Hair-styling">Hair-styling</option>
+                        <option value="Color-treatment">Color-treatment</option>
+                    </select>
+                </div>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <img src="/images/Artboard 19.png" alt="logo" style="width: 3.5em">
+        </div>
+        <div>
+            <p style="font-size: 0.8em;;">© 2023 Abdul Rahman</p>
+        </div>
+    </footer>
+</body>
+</html>

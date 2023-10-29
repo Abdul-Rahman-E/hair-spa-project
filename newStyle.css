@@ -1,0 +1,462 @@
+/* Standard variables and values for website */
+:root {
+    --text-color: hsla(0,1.2987012987013031%,15.098039215686276%,1);
+    --text-family: 'Poppins', sans-serif;
+    --head-one-size: 1.8em;
+    --head-two-size: 20px;
+    --para-size: 13px;
+}
+
+*, *::before, *::after {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: var(--text-family);
+    color:rgb(227, 187, 179);
+}
+
+h1 {
+    font-size: var(--head-one-size);
+}
+
+h2 {
+    font-size: var(--head-two-size);
+}
+p{
+    font-size: var(--para-size);
+    font-weight: 400;
+    text-align: left;
+}
+
+header {
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:black;
+}
+
+.logo, .tagline {
+    margin: 0.1em 0;
+}
+
+
+.inside {
+    background-color: rgb(20, 18, 18);
+    display: flex;
+    margin: 0 auto;
+    gap: 1em;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.4em 0;
+}
+
+.inside li {
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    padding: 0 1em;
+}
+
+.inside li a {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: rgb(221, 170, 161);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.1em;
+}
+.inside li a:hover {
+    color: rgba(244, 221, 216, 0.784);
+}
+
+.index-main { 
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,auto);
+    grid-template-rows: 100vh;
+    grid-template-areas: 'i i i'
+                         'b1 b2 b3';
+    background-color:rgba(6, 6, 6, 0.96);
+    overflow: hidden;
+    gap: 1em;
+    position: relative;
+}
+
+.sect {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://live.staticflickr.com/65535/53293840762_2377392a97_h.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.art {
+    width: 85%;
+    height: 60%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: 0.01em solid rgb(72, 110, 126);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 1em;
+    transition: 1s;
+}
+.art::before {
+    content: '';
+    inset: 0;
+    position: absolute;
+    background: linear-gradient(black,white);
+    opacity: 0.04;
+    transition: 2ms;
+}
+.art:hover::before {
+    background: rgba(232, 131, 31, 0);
+}
+.art:hover {
+    color: rgba(241, 177, 112, 0.8);
+    box-shadow: 5px 10px rgba(241, 177, 112, 0.8);
+    border-color: rgba(241, 177, 112, 0.8);
+}
+.art:hover:nth-child(1) {
+    height: 62%;
+}
+.click-box {
+    color:rgb(227, 187, 179);
+}
+
+.service-h {
+    position: absolute;
+    text-align: center;
+    justify-self: center;
+    font-size: 25px;
+    top: 54%;
+}
+
+.hero {
+    grid-area: i;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+}
+
+
+.sect2 {
+    grid-area: b1;
+}
+.sect3 {
+    grid-area: b2;
+}
+.sect4 {
+    grid-area: b3;
+}
+
+@media all and (min-width: 650px ) {
+    .art-2 {
+        right: 0px;
+    }
+    .art-4 {
+        left: 0px;
+    }
+    .album {
+        height: 17vw;
+    }
+}
+.album {
+    border-radius: 2.5px;
+}
+
+footer{
+    height: 15vh;
+    display: flex;
+    background-color: #181818;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer div:nth-child(1), footer div:nth-child(2) {
+    display: flex;
+    padding: 1em;
+}
+
+.tutorial-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,auto);
+    grid-template-areas: 'h h h'
+                         't1 t2 t3';
+    overflow: hidden;
+    background-color:rgba(6, 6, 6, 0.96);
+    gap: 0.2em;
+    padding: 1.5em 0 1.5em 0;
+}
+
+.tutorial-1-main, .about-sec {
+    background-color:rgba(6, 6, 6, 0.96);
+    padding: 1.5em 0 1.5em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.about-sec {
+    flex-direction: column;
+}
+
+.about-sec h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: var(--head-two-size);
+}
+
+.about-sec p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 17px;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+}
+.profile img {
+    box-shadow: 26px 1px 400px  yellow;
+}
+
+.tutorial-sec p {
+    font-size: 15px;
+}
+
+.tutorial-sec p:nth-of-type(1) {
+    margin-bottom: 20px;
+}
+.tutorial-sec {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 80%;
+    background-color: rgb(23, 24, 24);
+    border-radius: 20px;
+}
+
+.tutorial-sec img {
+    margin: 30px;
+}
+
+.tut {
+    padding: 5%;
+    display: flex;
+    overflow: hidden;
+}
+
+.tut:nth-child(1) {
+    grid-area: h;
+    padding: 1%;
+    justify-content: center;
+}
+
+.tut:nth-child(2) {
+    grid-area: t1;
+}
+
+.tut:nth-child(3) {
+    grid-area: t2;
+}
+
+.tut:nth-child(4) {
+    grid-area: t3;
+}
+
+.ar {
+    border: 0.01em solid rgb(72, 110, 126);
+    padding: 1em;
+    border-radius: 12px;
+    overflow: hidden;
+    isolation: isolate;
+    position: relative;
+    transition: 400ms 100ms;
+    height: 100%;
+}
+
+.im {
+    border-radius: 2.5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 15px;
+    background-color: rgb(24, 24, 24,0.5);
+
+    border-radius: 5px;
+}
+
+.left {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+}
+input, button, select {
+    all: unset;
+}
+
+.form-field, .btn {
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+    flex-grow: 1;
+    transition: 200ms;
+}
+
+.field1 label, .field2 label, .field3 label, .field4 label, .field5 label, .field6 label {
+    padding: 5px;
+}
+
+.field1 input, .field2 input, .field3 input, .field4 input, .field5 input, .field6 select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    opacity: 0.3;
+    transition: 200ms;
+    box-shadow: 2px 2px 2px black;
+}
+
+.field1 input:focus, .field2 input:focus, .field3 input:focus, .field4 input:focus, .field5 input:focus, .field6 select:focus {
+    opacity: 0.8;
+    color: #181818;
+}
+
+.field1 input:hover, .field2 input:hover, .field3 input:hover, .field4 input:hover, .field5 input:hover, .field6 select:hover {
+    opacity: 0.7;
+}
+
+.btn {
+    background-color: aliceblue;
+    justify-content: center;
+    opacity: 0.3;
+}
+.btn:focus {
+    opacity: 0.6;
+}
+.btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+@media all and (max-width: 650px ) {
+    .right {
+        display: none;
+    }
+    .hero {
+        display: none;
+    }
+    .index-main { 
+        grid-template-areas: 'b1' 
+                             'b2' 
+                             'b3';
+        background-color:rgba(6, 6, 6, 0.96);
+        overflow: hidden;
+        gap: 0;
+    
+    }
+    .sect {
+        align-items: center;
+    }
+
+    .art {
+        width: 85%;
+        height: 60%;
+        padding: 2em;
+        
+    }
+    .service-h {
+        position: absolute;
+        text-align: center;
+        justify-self: center;
+        font-size: 25px;
+        top: 1%;
+    }
+    .tutorial-main {
+        grid-template-areas: 'h'
+                             't1'
+                             't2'
+                             't3';
+    }
+    .ar {
+        padding: 2em;
+        transition: 1ms;
+    }
+    .tutorial-sec{
+        width: 100%;
+    }
+}
+
+.ar::before {
+    content: '';
+    inset: 0;
+    position: absolute;
+    background: linear-gradient(black,white);
+    opacity: 0.04;
+    transition: 1ms;
+}
+
+.ar:hover::before {
+    background: rgba(232, 131, 31, 0);
+   
+}
+.ar:hover {
+    color: rgba(241, 177, 112, 0.8);
+    box-shadow: 5px 10px rgba(241, 177, 112, 0.8);
+    border-color: rgba(241, 177, 112, 0.8);
+    cursor: pointer;
+}
+
+article.a1:hover::after div.ani1 {
+    transform: scale(1.3) ;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        rgb(0 0 0/ .9),
+        rgb(0 0 0/ 0)
+    );
+    transition: 1s;
+}
+
+.hero:hover::before {
+    background: rgba(232, 131, 31, 0.392);
+    background-size: 200% 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+}
+
+.book-main {
+    background: url('https://live.staticflickr.com/65535/53293840762_2377392a97_h.jpg');
+    background-position: center; 
+}
+
